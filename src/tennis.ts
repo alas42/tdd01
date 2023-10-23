@@ -1,13 +1,12 @@
 export class Player {
 	name: string = "";
-	point: number = 0;
 	score: Score = Score.love;
 	
 	constructor(name: string){
 		this.name = name;
 	}
 	public getScore(){
-		return this.score;
+		return score2[this.score]; //works
 	}
 	public addPoint(): void {
 		this.score++;
@@ -34,5 +33,7 @@ enum Score {
 	thirty = 2,
 	forty = 3,
 	egality = 4,
-	advantage = 5
+	advantage = 5,
+	win = 6
 }
+let score2: Array<string> = ['love', '15', '30', '40', 'egality', 'advantage', "win"]; 

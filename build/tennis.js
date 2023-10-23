@@ -4,12 +4,11 @@ exports.Game = exports.Player = void 0;
 class Player {
     constructor(name) {
         this.name = "";
-        this.point = 0;
         this.score = Score.love;
         this.name = name;
     }
     getScore() {
-        return this.score;
+        return score2[this.score]; //works
     }
     addPoint() {
         this.score++;
@@ -35,3 +34,4 @@ var Score;
     Score[Score["egality"] = 4] = "egality";
     Score[Score["advantage"] = 5] = "advantage";
 })(Score || (Score = {}));
+let score2 = ['love', '15', '30', '40', 'egality', 'advantage'];
